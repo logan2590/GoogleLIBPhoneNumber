@@ -76,7 +76,7 @@ namespace GoogleLIBPhoneNumber.Controllers
                 //Console.WriteLine("isValidRegion-------" + isValidRegion);
                 //Console.WriteLine("region--------------" + region);
 
-                data.OriginalNumber = originalNumber;
+                data.OriginalNumber = validatePhoneNumberModel.OriginalNumber;
                 data.FormattedNumber = originalNumber;
                 data.IsMobile = isMobile;
                 data.IsValidNumber = isValidNumber;
