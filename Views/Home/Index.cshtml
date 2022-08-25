@@ -1,0 +1,82 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model GoogleLIBPhoneNumber.Models.ValidatePhoneNumberModel
+
+<h1 class="display-4">Google LIB</h1>
+
+@using (Html.BeginForm(null, null, FormMethod.Post, new { id = "ggl" }))
+{
+    <div class="row mb-2">
+        <div class="col-md-4">
+            <label>Phone Number</label>
+        </div>
+        <div class="col-md-4">
+            <div>@Html.TextBoxFor(x => x.OriginalNumber, string.Empty)</div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <label>Region Code</label>
+        </div>
+        <div class="col-md-4">
+            <div>@Html.TextBoxFor(x => x.Region, string.Empty)</div>
+        </div>
+    </div>
+    <button id="btnSubmit" class="btn btn-primary">Submit</button>
+}
+
+@if (Model.OriginalNumber != null)
+{
+    <div class="row">
+        <div class="col-md-3">
+            <label>Original Number</label>
+        </div>
+        <div class="col-md-3">
+            <label>@Model.OriginalNumber</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <label>IsValidNumber</label>
+        </div>
+        <div class="col-md-3">
+            <label>@Model.IsValidNumber</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <label>IsValidNumberForRegion</label>
+        </div>
+        <div class="col-md-3">
+            <label>@Model.IsValidNumberForRegion</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <label>IsMobile</label>
+        </div>
+        <div class="col-md-3">
+            <label>@Model.IsMobile</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <label>FormattedNumber</label>
+        </div>
+        <div class="col-md-3">
+            <label>@Model.FormattedNumber</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <label>Region</label>
+        </div>
+        <div class="col-md-3">
+            <label>@Model.Region</label>
+        </div>
+    </div>
+}
+
+
