@@ -5,3 +5,5 @@
 /obj/Debug/netcoreapp3.1
 /.vs
 /obj/Release/netcoreapp3.1
+/bin/Debug/net5.0
+/obj
